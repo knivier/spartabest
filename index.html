@@ -21,7 +21,7 @@
       <label>Username </label><input type="text" name="username" id="username-field" class="login-form-field"><br><br>
       <label>Password: </label><input type="text" name="password" id="password-field" class="login-form-field" required><br><br>
       
-      <input type="submit" value="Login" onclick="logging()">
+      <input type="button" value="Login" onclick="login-form-submit">
     </form>
     </article>
     <script>
@@ -36,7 +36,7 @@
 
         if (username==="user" && password=== "web_dev"){
           //alert("You have successfully logged in.");
-          window.location="loggedin.html";
+          window.location.href="loggedin.html";
         }else{
           loginErrorMsg.style.opacity = 1
         }
