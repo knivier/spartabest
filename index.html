@@ -1,0 +1,59 @@
+<DOCTYPE html>
+<html>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <body style="background-color:#87bccc;">
+    <title>BetterD2L</title>
+<div style="width: 90%; background-color: #87bccc; margin: auto;">
+  <h1>BetterD2L</h1>
+  
+
+  <section>
+    <article>
+   <h3> Login Center </h3>   
+      <hr>
+    <div id="login-error-msg-holder">
+      <p id="login-error-msg">Invalid Username <span id="error-msg-second-line">and/or password</span></p>
+    </div>
+      
+    <form id="login-form" action="/loginsubmit" method="post">
+      <label>Username </label><input type="text" name="username" id="username-field" class="login-form-field"><br><br>
+      <label>Password: </label><input type="text" name="password" id="password-field" class="login-form-field" required><br><br>
+      
+      <input type="submit" value="Login" onclick="logging()">
+    </form>
+    </article>
+    <script>
+      const loginForm = document.getElementById("login-form");
+      const loginButton = document.getElementById("login-form-submit");
+      const loginErrorMsg = document.getElementById("login-error-msg");
+      if(loginButton){
+       loginButton.addEventListener("click",(e)=> {
+        e.preventDefault();
+        const username = loginForm.username.value;
+        const password = loginForm.password.value;
+
+        if (username==="user" && password=== "web_dev"){
+          //alert("You have successfully logged in.");
+          window.location="loggedin.html";
+        }else{
+          loginErrorMsg.style.opacity = 1
+        }
+        }); 
+      }
+    </script>
+     
+    <p>Don't have an account? Sign up here!</p>
+    <a href="signup.html">Sign Up!</a><br>
+
+<h3>Notice: Sharing your login details is not permitted and will result in an account ban.</h3>
+    <a href="loggedin.html">
+  </section>
+  <footer>
+  <p>BetterD2L is based off of D2L, and was modified to be simpler, with an integrated chatting system. It was created as a project for Spartahack 8 by Pranav, Agniva, Gera, and Devan. If any bugs are encountered, please notify us. Thank you.</p>
+  </footer>
+</div>
+</body>
+</html>
+  
