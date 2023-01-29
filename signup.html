@@ -3,11 +3,27 @@
   <head><h1>Create an Account</h1></head>
   <title>Create an Account</title>
   <body>
-    <form action="/createaccount" method="post">
-      <label>Username: *</label><input name="newusername" required><br><br>
-      <label>Password: *</label><input type="password" name="newpassword" required><br><br>
-      <input type="button" onclick="window.location.href='loggedin.html';" value="Sign Up"/>
+    <form action="/createaccount" method="post" id="signup">
+      <label>Username: *</label><input name="newusername" required id="newusername"><br><br>
+      <label>Password: *</label><input type="password" name="newpassword" required id="newpassword"><br><br>
+<!--       <input type="button" onclick="window.location.href='courses.html';" value="Sign Up"/> -->
+      <input type="button" onclick=adding() value="Sign Up"/>
+      <script>
+        function adding(){
+          import * as util from index.js
+          const db = new util.Database();
+          const signed = document.getElementById("signup");
+          if(signed){
+            const username = signed.newusername.value;
+            const password = signed.newpassword.value;
+            db.set(username,password);
+            window.location.href="loggedin.html";
+          }
+        }
+      </script>
       
     </form>
   </body>
 </html>
+
+  

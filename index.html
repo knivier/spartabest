@@ -21,10 +21,11 @@
       <label>Username </label><input type="text" name="username" id="username-field" class="login-form-field"><br><br>
       <label>Password: </label><input type="text" name="password" id="password-field" class="login-form-field" required><br><br>
       
-      <input type="button" value="Login" onclick="login-form-submit">
+      <input type="submit" value="Login" id="login-form-submit">
     </form>
     </article>
-    <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script>
       const loginForm = document.getElementById("login-form");
       const loginButton = document.getElementById("login-form-submit");
       const loginErrorMsg = document.getElementById("login-error-msg");
@@ -36,7 +37,7 @@
 
         if (username==="user" && password=== "web_dev"){
           //alert("You have successfully logged in.");
-          window.location.href="loggedin.html";
+          window.location.href="courses.html";
         }else{
           loginErrorMsg.style.opacity = 1
         }
@@ -48,7 +49,7 @@
     <a href="signup.html">Sign Up!</a><br>
 
 <h3>Notice: Sharing your login details is not permitted and will result in an account ban.</h3>
-    <a href="loggedin.html">
+    <a href="courses.html">
   </section>
   <footer>
   <p>BetterD2L is based off of D2L, and was modified to be simpler, with an integrated chatting system. It was created as a project for Spartahack 8 by Pranav, Agniva, Gera, and Devan. If any bugs are encountered, please notify us. Thank you.</p>
