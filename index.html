@@ -23,12 +23,19 @@
       
       <input type="submit" value="Login" id="login-form-submit">
     </form>
+<!--     <input type="checkbox" onclick="togglePass()">Show Password -->
     </article>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
 <script>
       const loginForm = document.getElementById("login-form");
       const loginButton = document.getElementById("login-form-submit");
       const loginErrorMsg = document.getElementById("login-error-msg");
+      // function togglePass(){
+      //   var x = loginButton
+      //   if (login.name === "password"){
+          
+      //   }
+      // }
       if(loginButton){
        loginButton.addEventListener("click",(e)=> {
         e.preventDefault();
